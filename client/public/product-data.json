@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Spinach",
+    "price": "200",
+    "currency": "LKR",
+    "image": "Spinach.png"
+  },
+  {
+    "id": 2,
+    "name": "Tomato",
+    "price": "300",
+    "currency": "LKR",
+    "image": "Tomato.png"
+  },
+  {
+    "id": 3,
+    "name": "Bence",
+    "price": "250",
+    "currency": "LKR",
+    "image": "Bence.png"
+  }
+]

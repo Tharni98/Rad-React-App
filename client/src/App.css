@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@800&display=swap');
+
+.body{
+    font-family: 'Sono', monospace;
+}
+
+
+.box{
+    background-color: #2f989e;
+    padding: 10px;
+    text-align: center;
+}
+
+.bg-red{
+    background-color: #cabc28;
+}
+.p-10{
+    padding: 10px;
+}
+.text-center{
+    text-align: center;
+}
