@@ -27,7 +27,7 @@ export class Product extends Component<ProductProps, ProductState> {
 
         return (
             <>
-              { <div className={'px-4 py-2 justify-center items-center  bg-white mr-2 mb-2 border-gray-500 border-[0.5px] '}>
+              { <div className={'relative px-4 py-2 justify-center items-center  bg-white mr-2 mb-2 border-gray-500 border-[0.5px] '}>
                     <div>
                         <img src={image} alt=""/>
                     </div>

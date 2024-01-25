@@ -7,7 +7,7 @@ export class Home extends Component {
     private api: any;
     constructor(props: {}| Readonly <{}>) {
         super(props);
-        this.api = axios.create({baseURL: 'http://localhost:4000'})
+        this.api = axios.create({baseURL: `http://localhost:4000`})
         this.state={
             data:[],
         }
@@ -15,15 +15,15 @@ export class Home extends Component {
 
     //React Lifecycle method
     componentDidMount() {
-        this.fetchData()
-            .then(r => console.log("Data fetch completed!" + r)); // Callback Function
+        this.fetchData();
+            /*.then(r => console.log("Data fetch completed!" + r)); */// Callback Function
     }
 
     //asynchronize
-    fetchData = async () =>{
+    /*fetchData = async () =>{
         try {
 
-            this.api.get('/products/all').then((res: {data: any}) => {
+            this.api.get('/product/all').then((res: {data: any}) => {
                 const jsonData = res.data;
                 console.log(jsonData)
                 this.setState({data:jsonData});
@@ -36,7 +36,22 @@ export class Home extends Component {
             console.log("Error fetching Data")
         }
 
+    }*/
+
+    fetchData= async ()=>{
+        try {
+            this.api.get('/products/all').then((res:{data:any}) =>{
+                const jsonData=res.data;
+                this.setState({data:jsonData});
+            }).catch((error:any)=>{
+                console.log("Axios Error");
+            })
+
+        }catch (error){
+            console.log("Data Not Found")
+        }
     }
+
 
 
     render() {

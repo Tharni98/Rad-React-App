@@ -14,11 +14,11 @@ const ProductController ={
         }
     },
     saveProduct: async function (req,res,next) {
-        console.log("awa save")
+        //console.log("awa save")
         try {
             const productData = req.body;
             const product = await Product.create(productData);
-
+            console.log(productData);
             res.status(200).json(product);
         } catch (err){
             console.error(err);
